@@ -18,7 +18,7 @@ variable "vpc_id" {
 variable "create_vpc" {
   description = "Determines whether to create the VPC or not; defaults to enabling the creation."
   default     = true
-  type        = Boolean
+  type        = bool
 }
 
 variable "az_count" {
