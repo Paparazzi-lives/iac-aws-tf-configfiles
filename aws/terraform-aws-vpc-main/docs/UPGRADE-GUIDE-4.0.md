@@ -2,7 +2,7 @@
 
 This VPC module is being upgraded to center all its resources on a single provider. Previously we used the awscc provider for various exploration reasons. However, as the module's usage grows, we wish to place more emphasis on customer experience and using a single provider is more seamless. Unfortunately, replacing the awscc resources requires state manipulation which is detailed below.
 
-## Preparation for upgrade
+## Preparation for the upgrade
 
 1. create a backup of your `tfstate` file. You will have to adjust your backup mechanism to your specific situation. 1 example of backup: `tf state pull | tee tfstateV3.bak`
 1. create a file of resources that require modification: `terraform state list | grep -e awscc | tee resources_to_replace.txt`
